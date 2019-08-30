@@ -43,7 +43,15 @@
                 android:id="@+id/btn_profile_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/edit_profile"/>
+                android:background="@color/colorChardonnay"
+                android:text="@string/edit_profile"
+                android:layout_marginBottom="8dp"/>
+            <Button
+                android:id="@+id/btn_logout_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logout_account"
+                android:background="@color/colorChardonnay"/>
         </LinearLayout>
     </LinearLayout>
 

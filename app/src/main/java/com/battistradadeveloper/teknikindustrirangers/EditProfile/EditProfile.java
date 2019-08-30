@@ -2,9 +2,10 @@ package com.battistradadeveloper.teknikindustrirangers.EditProfile;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,20 +14,45 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.battistradadeveloper.teknikindustrirangers.Fragment.MainFragment.Account;
+import com.battistradadeveloper.teknikindustrirangers.Model.User;
 import com.battistradadeveloper.teknikindustrirangers.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class EditProfile extends AppCompatActivity {
+	FirebaseAuth mAuth;
+	FirebaseFirestore firebaseFirestore;
+
 	Button btn_cancel, btn_save;
-	TextView txt_info, txt_name, txt_address,
-			txt_status, txt_company, txt_company_address;
-	EditText edt_name, edt_address,
-			edt_company, edt_company_address;
+	TextView txt_info;
+	TextView txt_name;
+	TextView txt_address;
+	TextView txt_status;
+	TextView txt_company;
+	TextView txt_company_address;
+	EditText edt_name;
+	EditText edt_address;
+	EditText edt_company;
+	EditText edt_company_address;
 	RadioButton rad_mahasiswa, rad_bekerja;
+
+	Map<String, Object> userMap = new HashMap<>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit_profile);
+
+		mAuth = FirebaseAuth.getInstance();
+		firebaseFirestore = FirebaseFirestore.getInstance();
 
 		// Memanggil seluruh field pada TextView
 		txt_info = findViewById(R.id.txt_edtprofile_info);
@@ -45,6 +71,16 @@ public class EditProfile extends AppCompatActivity {
 		// Memanggil seluruh field pada Radio Button
 		rad_mahasiswa = findViewById(R.id.radiomahasiswa);
 		rad_bekerja = findViewById(R.id.radiopekerjaan);
+		String status = "";
+
+		//todo
+		setDataToMap(
+				edt_name.getText().toString(),
+				edt_address.getText().toString(),
+				status,
+				edt_company.getText().toString(),
+				edt_company_address.getText().toString()
+		);
 
 		//Memanggil seluruh field pada button
 		btn_cancel = findViewById(R.id.btn_editprofile_cancel);
@@ -70,11 +106,47 @@ public class EditProfile extends AppCompatActivity {
 				alert.show();
 			}
 		});
-		btn_save =findViewById(R.id.btn_editprofile_save);
+		btn_save = findViewById(R.id.btn_editprofile_save);
 		btn_save.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "Button Save clicked", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "Save data to firestore", Toast.LENGTH_SHORT).show();
+				saveToFirestore();
+			}
+		});
+	}
+
+	private void setDataToMap(String toString, String toString1, String status, String toString2, String toString3) {
+		userMap.put("name", toString);
+		userMap.put("address", toString1);
+		userMap.put("status", status);
+		userMap.put("company",toString2);
+		userMap.put("company_address", toString3);
+	}
+
+	private void saveToFirestore() {
+		final Task<DocumentReference> usersReferenceTask = firebaseFirestore.collection("Users")
+				.add(userMap);
+
+		usersReferenceTask.addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+			@Override
+			public void onSuccess(DocumentReference documentReference) {
+				Toast.makeText(EditProfile.this, "Horeee...", Toast.LENGTH_SHORT).show();
+			}
+		});
+
+		usersReferenceTask.addOnFailureListener(new OnFailureListener() {
+			@Override
+			public void onFailure(@NonNull Exception e) {
+				Toast.makeText(EditProfile.this, "Agum noob", Toast.LENGTH_SHORT).show();
+			}
+		});
+
+		usersReferenceTask.addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+			@Override
+			public void onComplete(@NonNull Task<DocumentReference> task) {
+				Toast.makeText(EditProfile.this, "Completed...", Toast.LENGTH_SHORT).show();
+
 			}
 		});
 	}

@@ -66,5 +66,6 @@
     <string name="save">Save</string>
     <string name="bekerja">Bekerja</string>
     <string name="status">Status Pekerjaan</string>
+    <string name="logout_account">Logout Account</string>
 
 </resources>
