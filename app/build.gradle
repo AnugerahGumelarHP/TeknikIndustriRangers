@@ -2,14 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    signingConfigs {
-        agum {
-            storeFile file('E:\\Battistrada Client Project Source\\Teknik Industri\\industriranger.jks')
-            storePassword '10091997agumuchiha'
-            keyAlias = '10091997agumuchiha'
-            keyPassword '10091997agumuchiha'
-        }
-    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.battistradadeveloper.teknikindustrirangers"
