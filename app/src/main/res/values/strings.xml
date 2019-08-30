@@ -50,6 +50,21 @@
     <string name="info_mahasiswa">Pemuda pemudi yang menyiapkan diri untuk berkarya</string>
     <string name="mahasiswa">Mahasiswa</string>
     <string name="alumni">Alumni</string>
+
     <string name="edit_profile">Edit Profile</string>
+    <string name="nama">Nama</string>
+    <string name="update_profile_name">Update Your Profile Name</string>
+    <string name="pekerjaan">Pekerjaan</string>
+    <string name="update_profile_work">Update Your Profile Work</string>
+    <string name="alamat">Alamat</string>
+    <string name="update_profile_address">Update Your Profile Address</string>
+    <string name="perusahaan">Perusahaan</string>
+    <string name="update_profile_company">Update Your Profile Company</string>
+    <string name="alamat_perusahaan">Alamat Perusahaan</string>
+    <string name="update_your_company_address">Update Your Company Address</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="bekerja">Bekerja</string>
+    <string name="status">Status Pekerjaan</string>
 
 </resources>

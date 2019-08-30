@@ -4,9 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/padding"
     android:orientation="vertical"
     tools:context=".EditProfile.EditProfile">
 
+    <TextView
+        android:id="@+id/txt_edtprofile_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_profile"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"/>
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logoapp"
+        android:layout_gravity="center"/>
 
+    <!--Kolom Edit Profile Nama-->
+    <TextView
+        android:id="@+id/txt_edtprofile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nama"/>
+    <EditText
+        android:id="@+id/edt_editprofile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/update_profile_name"/>
+
+    <!--Kolom Edit Profile Alamat-->
+    <TextView
+        android:id="@+id/txt_edtprofile_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alamat"/>
+    <EditText
+        android:id="@+id/edt_editprofile_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/update_profile_address"
+        />
+
+    <!--Kolom Edit Profile Status-->
+    <TextView
+        android:id="@+id/txt_edtprofile_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status"/>
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        <RadioButton
+            android:id="@+id/radiomahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mahasiswa"
+            android:layout_marginEnd="20dp"/>
+        <RadioButton
+            android:id="@+id/radiopekerjaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bekerja"/>
+    </RadioGroup>
+
+    <!--Kolom Edit Profile Company-->
+    <TextView
+        android:id="@+id/txt_edtprofile_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perusahaan"/>
+    <EditText
+        android:id="@+id/edt_editprofile_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/update_profile_company"/>
+
+    <!--Kolom Edit Profile Company Address-->
+    <TextView
+        android:id="@+id/txt_edtprofile_companyaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alamat_perusahaan"/>
+    <EditText
+        android:id="@+id/edt_editprofile_companyaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/update_your_company_address"/>
+
+    <!--Layout fitur Button-->
+    <LinearLayout
+        android:id="@+id/layout_editprofile_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_editprofile_cancel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:background="@color/colorChardonnay"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/btn_editprofile_save"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:background="@color/colorChardonnay"/>
+    </LinearLayout>
 </LinearLayout>
