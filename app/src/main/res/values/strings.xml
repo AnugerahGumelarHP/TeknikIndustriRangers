@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Industri Connect</string>
+
+    <string name="email">Email</string>
+    <string name="input_email">Please Input Your Email</string>
+    <string name="password">Password</string>
+    <string name="input_password">Please Input Your Password</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="recover_password">Forgot Password? Recover now</string>
+
+    <!--Splash Screen-->
+    <string name="splashsreen_quote">"Being a family means you are a part of something wonderful. It means you will love and be loved for the rest of your life "</string>
+    <string name="splashsreen_quote_person"> -Lisa Weed</string>
+    <string name="friends">Friends</string>
+    <string name="chat">Chat</string>
+    <string name="timeline">Timeline</string>
+    <string name="account">Account</string>
+    <string name="more">More</string>
+    <string name="appbar_scrolling_view_behavior" />
+
+    <!--Intro Slider-->
+    <string name="next">LANJUT</string>
+    <string name="skip">LEWATI</string>
+    <string name="start">MULAI</string>
+
+    <string name="slide_1_title">Selamat Datang</string>
+    <string name="slide_1_desc">Halo, Apa Kabar Generasi Muda, Siap Menyonsong Hari Esok?</string>
+
+    <string name="slide_2_title">Networking Tanpa Batas</string>
+    <string name="slide_2_desc">Temukan Teman yang Nyaman Untuk Jejang Professional Anda</string>
+
+    <string name="slide_3_title">Job Fair</string>
+    <string name="slide_3_desc">Kerjaan Menarik Menantimu. Segera Pilih Perusahaan impianmu</string>
+
+    <string name="slide_4_title">Yuk Mulai Sekarang</string>
+    <string name="slide_4_desc">Dengan Industri Connect, hidup semakin mudah, yuk mulai sekarang</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">LOGOUT</string>
+    <string name="name_profile">Nur Rochmad Jati</string>
+    <string name="jobs_profile">Battistrada Developer</string>
+    <string name="address_profile">Bantul</string>
+    <string name="under_maintenance">Under Maintenance</string>
+    <string name="edit">Edit</string>
+    <string name="personal_awarding_and_certification">Personal Awarding and Certification</string>
+    <string name="personal_experience">Personal Experience</string>
+    <string name="info_mahasiswa">Pemuda pemudi yang menyiapkan diri untuk berkarya</string>
+    <string name="mahasiswa">Mahasiswa</string>
+    <string name="alumni">Alumni</string>
+    <string name="edit_profile">Edit Profile</string>
+
+</resources>

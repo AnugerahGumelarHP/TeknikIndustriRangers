@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "745341025444",
+    "firebase_url": "https://teknikindustriranger.firebaseio.com",
+    "project_id": "teknikindustriranger",
+    "storage_bucket": "teknikindustriranger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745341025444:android:faf03700ee6c93d5",
+        "android_client_info": {
+          "package_name": "com.battistradadeveloper.teknikindustrirangers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745341025444-q2pduuh7bq1r1t13c8vdolcilv1lva6k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.battistradadeveloper.teknikindustrirangers",
+            "certificate_hash": "cd45387363062016487e1434d324ee47070445ef"
+          }
+        },
+        {
+          "client_id": "745341025444-s37n68ljfdj4odq0be18c2b9ton395mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMtUH2VtNxmR_Uw9zeHGL_qGQjB39OB-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745341025444-s37n68ljfdj4odq0be18c2b9ton395mt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

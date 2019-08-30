@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txt_alumni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alumni"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/img_register_alumni"
+        />
+    <ImageView
+        android:id="@+id/img_register_alumni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/alumni" />
+    <TextView
+        android:id="@+id/txt_info_register_alumni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info Alumni"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_register_alumni"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btn_register_alumni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_info_register_alumni"
+        android:layout_centerHorizontal="true"
+        android:text="Yuk, Mulai Sekarang"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
