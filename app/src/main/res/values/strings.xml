@@ -38,13 +38,11 @@
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout">LOGOUT</string>
     <string name="name_profile">Nur Rochmad Jati</string>
     <string name="jobs_profile">Battistrada Developer</string>
     <string name="address_profile">Bantul</string>
     <string name="under_maintenance">Under Maintenance</string>
-    <string name="edit">Edit</string>
     <string name="personal_awarding_and_certification">Personal Awarding and Certification</string>
     <string name="personal_experience">Personal Experience</string>
     <string name="info_mahasiswa">Pemuda pemudi yang menyiapkan diri untuk berkarya</string>
@@ -54,8 +52,6 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="nama">Nama</string>
     <string name="update_profile_name">Update Your Profile Name</string>
-    <string name="pekerjaan">Pekerjaan</string>
-    <string name="update_profile_work">Update Your Profile Work</string>
     <string name="alamat">Alamat</string>
     <string name="update_profile_address">Update Your Profile Address</string>
     <string name="perusahaan">Perusahaan</string>

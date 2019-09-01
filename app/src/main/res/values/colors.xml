@@ -4,18 +4,11 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="colorWhite">#FFFFFF</color>
-
     <!--THEME COLOUR GREEN-->
-    <color name="colorPlantation">#274B4B</color>
-    <color name="colorSpringRain">#A1C5A3</color>
-    <color name="colorCuttyShark">#4B7173</color>
-    <color name="colorMandy">#E54F4F</color>
 
     <!--THEME COLOUR BLUE-->
     <color name="colorChardonnay">#FFC980</color>
     <color name="colorEasternBlue">#14AAB8</color>
-    <color name="colorPictonBlue">#4799EB</color>
     <color name="colorRoyalBlue">#5269E0</color>
     <color name="colorEbonyClay">#1F242E</color>
 
