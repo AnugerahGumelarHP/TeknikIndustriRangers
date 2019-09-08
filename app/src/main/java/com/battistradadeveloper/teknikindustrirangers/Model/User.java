@@ -7,6 +7,8 @@ public class User {
 	private String company;
 	private String company_address;
 
+	public  User(){}
+
 	public User(String name, String address, String status, String company, String company_address) {
 		this.name = name;
 		this.address = address;
@@ -33,5 +35,25 @@ public class User {
 
 	public String getCompany_address() {
 		return company_address;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	public void setCompany_address(String company_address) {
+		this.company_address = company_address;
 	}
 }

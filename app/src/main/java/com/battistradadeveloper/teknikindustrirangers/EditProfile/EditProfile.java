@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.battistradadeveloper.teknikindustrirangers.Fragment.MainFragment.Account;
+import com.battistradadeveloper.teknikindustrirangers.Model.User;
 import com.battistradadeveloper.teknikindustrirangers.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -70,9 +70,6 @@ public class EditProfile extends AppCompatActivity {
         // Memanggil seluruh field pada Radio Button
         rad_mahasiswa = findViewById(R.id.radiomahasiswa);
         rad_bekerja = findViewById(R.id.radiopekerjaan);
-        String status = "";
-
-        //todo
 
         //Memanggil seluruh field pada button
         btn_cancel = findViewById(R.id.btn_editprofile_cancel);
@@ -99,23 +96,33 @@ public class EditProfile extends AppCompatActivity {
         btn_save = findViewById(R.id.btn_editprofile_save);
         btn_save.setOnClickListener((view) -> {
             Toast.makeText(getApplicationContext(), "Save data to firestore", Toast.LENGTH_SHORT).show();
-            setDataToMap(
-                    edt_name.getText().toString(),
-                    edt_address.getText().toString(),
-                    status,
-                    edt_company.getText().toString(),
-                    edt_company_address.getText().toString()
-            );
+            String companyAddress = edt_company_address.getText().toString();
+            String name = edt_name.getText().toString();
+            String address = edt_address.getText().toString();
+            String status = "";
+            if(rad_mahasiswa.isChecked()){
+                status = "mahasiswa";
+            }else {
+                status = "alumni";
+            }
+            String company = edt_company.getText().toString();
+            User user = new User();
+            user.setName(name);
+            user.setAddress(address);
+            user.setStatus(status);
+            user.setCompany(company);
+            user.setCompany_address(companyAddress);
+            setDataToMap(user);
             saveToFirestore();
         });
     }
 
-    private void setDataToMap(String toString, String toString1, String status, String toString2, String toString3) {
-        userMap.put("name", toString);
-        userMap.put("address", toString1);
-        userMap.put("status", status);
-        userMap.put("company", toString2);
-        userMap.put("company_address", toString3);
+    private void setDataToMap(User user) {
+        userMap.put("name", user.getName());
+        userMap.put("address", user.getAddress());
+        userMap.put("status", user.getStatus());
+        userMap.put("company", user.getCompany());
+        userMap.put("company_address", user.getCompany_address());
     }
 
 //	Long TIME_OUT = 1000L;

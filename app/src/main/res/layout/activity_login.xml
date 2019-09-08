@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,86 +9,94 @@
     android:padding="@dimen/padding"
     android:gravity="center"
     android:background="@color/colorRoyalBlue"
-    tools:context=".FrontApp.Login">
-
+    tools:context=".FrontApp.Login"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/roun_rect_easternblue">
-        <ImageView
-            android:id="@+id/img_login"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:src="@drawable/logoapp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/colorRoyalBlue"
+        tools:context=".FrontApp.Login">
 
-        <!--Email-->
-        <TextView
-            android:id="@+id/txt_login_email"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/email"
-            android:textStyle="bold"
-            android:textColor="@color/colorEbonyClay"/>
-        <EditText
-            android:id="@+id/edt_login_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/input_email"
-            android:inputType="textEmailAddress"
-            />
+            android:orientation="vertical"
+            android:background="@drawable/roun_rect_easternblue">
+            <ImageView
+                android:id="@+id/img_login"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/logoapp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
 
-        <!--Password-->
-        <TextView
-            android:id="@+id/txt_login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/password"
-            android:textStyle="bold"
-            android:textColor="@color/colorEbonyClay"/>
-        <EditText
-            android:id="@+id/edt_login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/input_password"
-            android:inputType="textCapWords"/>
+            <!--Email-->
+            <TextView
+                android:id="@+id/txt_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textStyle="bold"
+                android:textColor="@color/colorEbonyClay"/>
+            <EditText
+                android:id="@+id/edt_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_email"
+                android:inputType="textEmailAddress"
+                />
 
-        <!--Button Login-->
-        <TextView
-            android:id="@+id/fitur_login_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textColor="@color/colorEbonyClay"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/roun_rect_chardonnay"/>
+            <!--Password-->
+            <TextView
+                android:id="@+id/txt_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textStyle="bold"
+                android:textColor="@color/colorEbonyClay"/>
+            <EditText
+                android:id="@+id/edt_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_password"
+                android:inputType="textCapWords"/>
 
-        <TextView
-            android:id="@+id/txt_login_recover_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recover_password"
-            android:textStyle="bold"
-            android:textColor="@color/colorEbonyClay"
-            android:gravity="center"
-            android:layout_marginTop="5dp"/>
+            <!--Button Login-->
+            <TextView
+                android:id="@+id/fitur_login_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textColor="@color/colorEbonyClay"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roun_rect_chardonnay"/>
 
-        <!--Button User-->
-        <TextView
-            android:id="@+id/fitur_login_register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:textColor="@color/colorEbonyClay"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/roun_rect_chardonnay"/>
+            <TextView
+                android:id="@+id/txt_login_recover_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recover_password"
+                android:textStyle="bold"
+                android:textColor="@color/colorEbonyClay"
+                android:gravity="center"
+                android:layout_marginTop="5dp"/>
 
+            <!--Button User-->
+            <TextView
+                android:id="@+id/fitur_login_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:textColor="@color/colorEbonyClay"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/roun_rect_chardonnay"/>
+
+        </LinearLayout>
     </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>
