@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "745341025444-o89gv8olohthkvltiie3gr976hb0vhac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.battistradadeveloper.teknikindustrirangers",
+            "certificate_hash": "4175b69c753cdddcd2da0aa6e2b03be64d610535"
+          }
+        },
+        {
           "client_id": "745341025444-q2pduuh7bq1r1t13c8vdolcilv1lva6k.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
